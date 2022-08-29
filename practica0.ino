@@ -24,6 +24,6 @@ void loop ()
   if (SensorNivel==0)
   {
    Serial.println("Nivel bajo de Agua, Rellenar el tanque");
-   delay(3000);
+   delay(1000);
   }
 }
