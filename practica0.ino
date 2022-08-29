@@ -27,3 +27,27 @@ void loop ()
    delay(1000);
   }
 }
+
+// Sensor de Luz LDR ¿?
+
+int ledPin = 9; //Piezo en Pin 8
+int ldrPin = 0; //LDR en el pin analogico 0
+
+int ldrValue = 0;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  ldrValue = analogRead(ldrPin);
+  Serial.print(ldrValue);
+  if(ldrValue >= 1010){
+    digitalWrite(ledPin, HIGH);
+  }
+  else {
+    digitalWrite(ledPin, LOW);
+  }
+  delay(500);
+}
