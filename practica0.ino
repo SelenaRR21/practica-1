@@ -41,13 +41,13 @@ void setup(){
 }
 
 void loop() {
-  ldrPin = analogRead(ldrPin);
-  Serial.print(ldrPin);
+  ldrValue = analogRead(ldrPin);
+  Serial.print(ldrValue);
   if(ldrValue >= 1010){
     digitalWrite(ledPin, HIGH);
   }
   else {
     digitalWrite(ledPin, LOW);
   }
-  delay(3000);
+  delay(500);
 }
